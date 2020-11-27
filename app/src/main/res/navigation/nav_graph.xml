@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.appnews.presentation.main.main.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.example.appnews.presentation.navigationDrawer.bookmarks.BookmarksFragment"
+        android:label="bookmarks_fragment"
+        tools:layout="@layout/bookmarks_fragment" >
+        <action
+            android:id="@+id/action_bookmarksFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.appnews.presentation.main.detail.DetailFragment"
+        android:label="detail_fragment"
+        tools:layout="@layout/detail_fragment">
+    <argument
+        android:name="article"
+        app:argType="com.example.appnews.data.model.Article" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.example.appnews.presentation.navigationDrawer.information.InformationFragment"
+        android:label="information_fragment"
+        tools:layout="@layout/information_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.appnews.presentation.navigationDrawer.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/businessFragment"
+        android:name="com.example.appnews.presentation.main.business.BusinessFragment"
+        android:label="business_fragment"
+        tools:layout="@layout/business_fragment" />
+    <fragment
+        android:id="@+id/entertainmentFragment"
+        android:name="com.example.appnews.presentation.main.entertainment.EntertainmentFragment"
+        android:label="entertainment_fragment"
+        tools:layout="@layout/entertainment_fragment" />
+    <fragment
+        android:id="@+id/healthFragment"
+        android:name="com.example.appnews.presentation.main.health.HealthFragment"
+        android:label="health_fragment"
+        tools:layout="@layout/health_fragment" />
+    <fragment
+        android:id="@+id/scienceFragment"
+        android:name="com.example.appnews.presentation.main.science.ScienceFragment"
+        android:label="science_fragment"
+        tools:layout="@layout/science_fragment" />
+    <fragment
+        android:id="@+id/sportFragment"
+        android:name="com.example.appnews.presentation.main.sport.SportFragment"
+        android:label="sport_fragment"
+        tools:layout="@layout/sport_fragment" />
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.appnews.presentation.main.technology.TechnologyFragment"
+        android:label="technology_fragment"
+        tools:layout="@layout/technology_fragment" />
+</navigation>

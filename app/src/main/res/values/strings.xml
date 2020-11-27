@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AppNews</string>
+    <string name="hello_blank_fragment">hello</string>
+    <string name="news_string">Новости</string>
+    <string name="bookmarks_string">Избранное</string>
+    <string name="settings_string">Настройки</string>
+    <string name="about">Информация</string>
+    <string name="main_string">Main</string>
+    <string name="settings_and_features">Settings and Features</string>
+    <string name="test">test</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="delete_article">article was deleted</string>
+    <string name="save_article">Article saved successfully</string>
+</resources>

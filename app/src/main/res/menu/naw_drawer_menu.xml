@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/main_string">
+        <menu>
+            <item android:id="@+id/mainFragment"
+                android:icon="@drawable/ic_newspaper"
+                android:title="@string/news_string"/>
+
+            <item android:id="@+id/bookmarksFragment"
+                android:icon="@drawable/ic_bookmark"
+                android:title="@string/bookmarks_string"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/settings_and_features">
+        <menu>
+            <item android:id="@+id/settingsFragment"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings_string"/>
+
+            <item android:id="@+id/informationFragment"
+                android:icon="@drawable/ic_information"
+                android:title="@string/about"/>
+        </menu>
+    </item>
+
+</menu>
