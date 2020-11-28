@@ -18,9 +18,9 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
-            app:popupTheme="@style/Widget.AppCompat.PopupMenu.Overflow"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/Widget.AppCompat.PopupMenu.Overflow" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -51,6 +51,8 @@
         android:layout_gravity="start"
         android:background="@color/colorLight"
         app:headerLayout="@layout/nav_header"
+        app:itemIconTint="@color/itemIconColors"
+        app:itemTextColor="@color/itemTextColors"
         app:menu="@menu/naw_drawer_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

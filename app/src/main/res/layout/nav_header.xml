@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/app_margin"
         android:text="@string/app_name"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/descriptionTextColor"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/iv_test"
