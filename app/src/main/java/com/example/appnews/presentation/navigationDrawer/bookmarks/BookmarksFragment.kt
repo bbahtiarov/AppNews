@@ -3,6 +3,7 @@ package com.example.appnews.presentation.navigationDrawer.bookmarks
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -23,6 +24,11 @@ class BookmarksFragment : Fragment(R.layout.bookmarks_fragment) {
     private lateinit var viewModelProviderFactory: ViewModelProviderFactory
     private lateinit var bookmarksViewModel: BookmarksViewModel
 
+    override fun onStart() {
+        super.onStart()
+        (activity as AppCompatActivity).supportActionBar?.show()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val appComponent = DaggerAppComponent.builder().contextModule(ContextModule(requireContext())).build()
@@ -35,7 +41,7 @@ class BookmarksFragment : Fragment(R.layout.bookmarks_fragment) {
             val bundle = Bundle().apply {
                 putSerializable("article", movie)
             }
-            findNavController().navigate(R.id.action_bookmarksFragment_to_detailFragment, bundle)
+            findNavController().navigate(R.id.detailFragment, bundle)
         }
 
         val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(

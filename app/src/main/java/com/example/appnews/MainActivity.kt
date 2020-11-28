@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mToolbar: Toolbar
     private lateinit var mToggle: ActionBarDrawerToggle
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(R.style.AppTheme)
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         PreferenceHelper.initialize(this)
         if (!PreferenceHelper.getInstance().getBoolean("theme")) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
 
-        super.onCreate(savedInstanceState)
+        setTheme(R.style.AppTheme)
 
         APP_ACTIVITY = this
         setContentView(R.layout.activity_main)

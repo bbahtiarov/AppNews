@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.appnews.R
@@ -13,6 +14,11 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment(R.layout.main_fragment) {
+
+    override fun onStart() {
+        super.onStart()
+        (activity as AppCompatActivity).supportActionBar?.show()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val pageAdapter = ViewPagerAdapter(requireActivity())
@@ -29,4 +35,6 @@ class MainFragment : Fragment(R.layout.main_fragment) {
                 }
             }).attach()
     }
+
+
 }

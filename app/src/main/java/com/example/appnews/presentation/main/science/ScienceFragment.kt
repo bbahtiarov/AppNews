@@ -11,7 +11,6 @@ import com.example.appnews.R
 import com.example.appnews.di.ContextModule
 import com.example.appnews.di.DaggerAppComponent
 import com.example.appnews.presentation.adapters.MainAdapter
-import com.example.appnews.presentation.main.health.HealthViewModel
 import com.example.appnews.utils.Resource
 import com.example.appnews.utils.factories.ViewModelProviderFactory
 import com.example.appnews.utils.injectViewModel

@@ -12,3 +12,5 @@ const val CATEGORY_HEALTH = "health"
 const val CATEGORY_SCIENCE = "science"
 const val CATEGORY_SPORTS = "sports"
 const val CATEGORY_TECHNOLOGY = "technology"
+
+const val CARD_ITEM_SIZE = 6
