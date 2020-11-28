@@ -1,15 +1,15 @@
 package com.example.appnews.presentation.adapters
 
-import android.os.Bundle
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appnews.R
 import com.example.appnews.data.model.Article
-import com.example.appnews.data.repositories.NewsRepository
 import com.example.appnews.utils.downloadAndSetImage
 import kotlinx.android.synthetic.main.main_item.view.*
 
@@ -41,6 +41,8 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ArticleHolder>(){
     override fun onBindViewHolder(holder: ArticleHolder, position: Int) {
         val article = differ.currentList[position]
         holder.itemView.apply {
+            cardView.animation = AnimationUtils.loadAnimation(context, R.anim.fade_scale_animation)
+
             poster_imageView.downloadAndSetImage(article.urlToImage)
             title_textView.text = article.title
             description_textView.text = article.description

@@ -13,4 +13,5 @@
     <string name="delete_article">article was deleted</string>
     <string name="save_article">Article saved successfully</string>
     <string name="enable_theme_string">Включить темную тему</string>
+    <string name="used_technology_string">Используемые технологии:</string>
 </resources>

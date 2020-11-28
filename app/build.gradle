@@ -51,11 +51,6 @@ dependencies {
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
 
-    //Dagger - Hilt
-
-    kapt 'com.google.dagger:dagger-android-processor:2.15'
-    kapt 'com.google.dagger:dagger-compiler:2.28'
-
     // Dagger2
     kapt "com.google.dagger:dagger-compiler:2.28"
     kapt "com.google.dagger:dagger-android-processor:2.15"
