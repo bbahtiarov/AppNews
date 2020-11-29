@@ -2,6 +2,8 @@ package com.example.appnews.data.retrofit
 
 import com.example.appnews.data.model.NewsResponse
 import com.example.appnews.utils.*
+import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.rxjava3.core.Observable
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -9,7 +11,7 @@ import retrofit2.http.Query
 interface NewsService {
 
     @GET("v2/top-headlines")
-    suspend fun getBusinessNews(
+      fun getBusinessNews(
         @Query("country")
         countryCode: String = "ru",
         @Query("page")
@@ -18,7 +20,7 @@ interface NewsService {
         apiKey: String = API_KEY,
         @Query("category")
         category: String = CATEGORY_BUSINESS
-    ): Response<NewsResponse>
+    ): Observable<NewsResponse>
 
     @GET("v2/top-headlines")
     suspend fun getEntertainmentNews(

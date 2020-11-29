@@ -5,7 +5,7 @@ import com.example.appnews.data.retrofit.NewsClient
 import com.example.appnews.data.room.NewsDatabase
 
 class NewsRepository(private val db: NewsDatabase) {
-    suspend fun getBusinessNews() = NewsClient.api.getBusinessNews()
+     fun getBusinessNews() = NewsClient.api.getBusinessNews()
     suspend fun getEntertainmentNews() = NewsClient.api.getEntertainmentNews()
     suspend fun getHealthNews() = NewsClient.api.getHealthNews()
     suspend fun getTechnologyNews() = NewsClient.api.getTechnologyNews()
