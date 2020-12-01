@@ -1,4 +1,4 @@
-package com.example.appnews.data.retrofit
+package com.example.appnews.data.api
 
 import com.example.appnews.utils.BASE_URL
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory

@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/app_margin"
-        android:text="Retrofit2"
+        android:text="@string/retrofit2"
         android:textColor="@color/titleTextColor"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/app_margin"
-        android:text="Dagger2"
+        android:text="@string/dagger2"
         android:textColor="@color/titleTextColor"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/app_margin"
-        android:text="Architecture Components (Room, ViewModel, LiveData, Navigation)"
+        android:text="@string/architecture_components_string"
         android:textColor="@color/titleTextColor"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/app_margin"
-        android:text="Glide"
+        android:text="@string/glide"
         android:textColor="@color/titleTextColor"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,22 +68,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/app_margin"
-        android:text="Coroutines"
+        android:text="@string/coroutines"
         android:textColor="@color/titleTextColor"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/glide" />
 
     <TextView
-        android:id="@+id/material_desingn"
+        android:id="@+id/material_design"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/app_margin"
-        android:text="Material Design"
+        android:text="@string/material_design"
         android:textColor="@color/titleTextColor"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coroutines" />
+
+    <TextView
+        android:id="@+id/rxJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="@string/rxjava"
+        android:textColor="@color/titleTextColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material_design" />
+
+    <TextView
+        android:id="@+id/lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="@string/lottie"
+        android:textColor="@color/titleTextColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rxJava" />
+
+    <TextView
+        android:id="@+id/mvvm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="@string/mvvm"
+        android:textColor="@color/titleTextColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

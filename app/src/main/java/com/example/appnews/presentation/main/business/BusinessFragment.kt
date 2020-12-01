@@ -12,9 +12,11 @@ import com.example.appnews.di.ContextModule
 import com.example.appnews.di.DaggerAppComponent
 import com.example.appnews.presentation.adapters.MainAdapter
 import com.example.appnews.utils.Resource
+import com.example.appnews.utils.ext.injectViewModel
 import com.example.appnews.utils.factories.ViewModelProviderFactory
-import com.example.appnews.utils.injectViewModel
 import kotlinx.android.synthetic.main.business_fragment.*
+import kotlinx.android.synthetic.main.business_fragment.loading
+import kotlinx.android.synthetic.main.entertainment_fragment.*
 
 class BusinessFragment : Fragment(R.layout.business_fragment) {
 
@@ -66,12 +68,12 @@ class BusinessFragment : Fragment(R.layout.business_fragment) {
     }
 
     private fun hideProgressBar() {
-        progressBar.visibility = View.INVISIBLE
+        loading.visibility = View.INVISIBLE
         isLoading = false
     }
 
     private fun showProgressBar() {
-        progressBar.visibility = View.VISIBLE
+        loading.visibility = View.VISIBLE
         isLoading = true
     }
 

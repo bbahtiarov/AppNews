@@ -1,8 +1,7 @@
-package com.example.appnews.data.retrofit
+package com.example.appnews.data.api
 
 import com.example.appnews.data.model.NewsResponse
 import com.example.appnews.utils.*
-import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.Response
 import retrofit2.http.GET
@@ -18,6 +17,8 @@ interface NewsService {
         pageNumber: Int = 1,
         @Query("apiKey")
         apiKey: String = API_KEY,
+        @Query("limit")
+        loadSize: Int = 30,
         @Query("category")
         category: String = CATEGORY_BUSINESS
     ): Observable<NewsResponse>

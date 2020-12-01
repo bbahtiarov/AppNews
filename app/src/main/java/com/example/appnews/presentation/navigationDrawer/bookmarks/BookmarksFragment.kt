@@ -14,7 +14,7 @@ import com.example.appnews.di.ContextModule
 import com.example.appnews.di.DaggerAppComponent
 import com.example.appnews.presentation.adapters.MainAdapter
 import com.example.appnews.utils.factories.ViewModelProviderFactory
-import com.example.appnews.utils.injectViewModel
+import com.example.appnews.utils.ext.injectViewModel
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.bookmarks_fragment.*
 

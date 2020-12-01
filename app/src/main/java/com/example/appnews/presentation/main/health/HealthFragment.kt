@@ -13,8 +13,10 @@ import com.example.appnews.di.DaggerAppComponent
 import com.example.appnews.presentation.adapters.MainAdapter
 import com.example.appnews.utils.Resource
 import com.example.appnews.utils.factories.ViewModelProviderFactory
-import com.example.appnews.utils.injectViewModel
+import com.example.appnews.utils.ext.injectViewModel
+import kotlinx.android.synthetic.main.entertainment_fragment.*
 import kotlinx.android.synthetic.main.health_fragment.*
+import kotlinx.android.synthetic.main.health_fragment.loading
 
 
 class HealthFragment : Fragment(R.layout.health_fragment) {
@@ -67,12 +69,12 @@ class HealthFragment : Fragment(R.layout.health_fragment) {
     }
 
     private fun hideProgressBar() {
-        progressBar.visibility = View.INVISIBLE
+        loading.visibility = View.INVISIBLE
         isLoading = false
     }
 
     private fun showProgressBar() {
-        progressBar.visibility = View.VISIBLE
+        loading.visibility = View.VISIBLE
         isLoading = true
     }
 

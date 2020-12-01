@@ -10,7 +10,7 @@ import com.example.appnews.R
 import com.example.appnews.di.ContextModule
 import com.example.appnews.di.DaggerAppComponent
 import com.example.appnews.utils.factories.ViewModelProviderFactory
-import com.example.appnews.utils.injectViewModel
+import com.example.appnews.utils.ext.injectViewModel
 import com.example.appnews.utils.showSnackbar
 import kotlinx.android.synthetic.main.detail_fragment.*
 

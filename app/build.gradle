@@ -51,6 +51,9 @@ dependencies {
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
 
+    // Lotie
+    implementation 'com.airbnb.android:lottie:3.5.0'
+
     // RxJava3
     implementation "io.reactivex.rxjava3:rxjava:3.0.7"
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'

@@ -14,4 +14,13 @@
     <string name="save_article">Article saved successfully</string>
     <string name="enable_theme_string">Включить темную тему</string>
     <string name="used_technology_string">Используемые технологии:</string>
+    <string name="retrofit2">Retrofit2</string>
+    <string name="dagger2">Dagger2</string>
+    <string name="architecture_components_string">Architecture Components (Room, ViewModel, LiveData, Navigation)</string>
+    <string name="glide">Glide</string>
+    <string name="coroutines">Coroutines</string>
+    <string name="material_design">Material Design</string>
+    <string name="rxjava">RxJava</string>
+    <string name="lottie">Lottie</string>
+    <string name="mvvm">MVVM</string>
 </resources>
