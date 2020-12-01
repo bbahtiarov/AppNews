@@ -1,6 +1,8 @@
 package com.example.appnews
 
+
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.appnews.utils.APP_ACTIVITY
 import com.example.appnews.utils.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,9 +48,21 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (mToggle.onOptionsItemSelected(item)) return true
-        return super.onOptionsItemSelected(item)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.search_menu, menu)
+        return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (mToggle.onOptionsItemSelected(item)) return true
+        return when (item.itemId) {
+            R.id.search_menu -> {
+                // Open the search view on the menu item click.
+                search_view.openSearch()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
+    }
 }

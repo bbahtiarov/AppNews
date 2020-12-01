@@ -9,6 +9,7 @@
         android:icon="@drawable/ic_news"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:authorities="br.com.mauker.materialsearchview.searchhistorydatabase"
         android:supportsRtl="true"
         android:name=".NewsApplication"
         android:theme="@style/splashScreenTheme">
