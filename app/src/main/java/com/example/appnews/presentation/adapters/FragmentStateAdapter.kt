@@ -1,5 +1,7 @@
 package com.example.appnews.presentation.adapters
 
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -11,8 +13,7 @@ import com.example.appnews.presentation.main.sport.SportFragment
 import com.example.appnews.presentation.main.technology.TechnologyFragment
 import com.example.appnews.utils.CARD_ITEM_SIZE
 
-
-class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
+class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity){
 
     override fun getItemCount(): Int = CARD_ITEM_SIZE
 

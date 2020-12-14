@@ -1,9 +1,7 @@
 package com.example.appnews.di
 
-import android.app.Application
 import android.content.Context
 import androidx.room.Room
-import com.example.appnews.NewsApplication
 import com.example.appnews.data.repositories.NewsRepository
 import com.example.appnews.data.room.NewsDatabase
 import com.example.appnews.utils.factories.ViewModelProviderFactory
@@ -14,12 +12,6 @@ import javax.inject.Singleton
 
 @Module(includes = [ContextModule::class])
 class AppModule {
-
-    @Provides
-    @Singleton
-    fun provideContext(application: NewsApplication): Application {
-        return application
-    }
 
     @Singleton
     @Provides
