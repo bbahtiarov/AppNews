@@ -23,12 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        PreferenceHelper.initialize(this)
-        if (!PreferenceHelper.getInstance().getBoolean("theme")) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
+        initPrefHelper()
 
         setTheme(R.style.AppTheme)
 
@@ -36,6 +31,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initFields()
         navigationView.setupWithNavController(newsNavHostFragment.findNavController())
+    }
+
+    private fun initPrefHelper() {
+        PreferenceHelper.initialize(this)
+        if (!PreferenceHelper.getInstance().getBoolean("theme")) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
     }
 
     private fun initFields() {
@@ -63,6 +67,5 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
-
     }
 }
