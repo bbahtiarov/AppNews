@@ -7,7 +7,7 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.appnews"
@@ -39,17 +39,17 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
 
     // Room
-    implementation "androidx.room:room-runtime:2.2.5"
-    kapt "androidx.room:room-compiler:2.2.5"
-    implementation "androidx.room:room-ktx:2.2.5"
+    implementation "androidx.room:room-runtime:2.3.0"
+    kapt "androidx.room:room-compiler:2.3.0"
+    implementation "androidx.room:room-ktx:2.3.0"
 
     // Lifecycle
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
 
     // Lotie
     implementation 'com.airbnb.android:lottie:3.5.0'
@@ -62,64 +62,60 @@ dependencies {
     // Dagger2
     kapt "com.google.dagger:dagger-compiler:2.28"
     kapt "com.google.dagger:dagger-android-processor:2.15"
-    implementation "com.google.dagger:dagger:2.28"
-    implementation "com.google.dagger:dagger-android:2.15"
+    implementation "com.google.dagger:dagger:2.36"
+    implementation "com.google.dagger:dagger-android:2.35.1"
 
     // Paging
     implementation "android.arch.paging:runtime:1.0.1"
-    implementation "androidx.paging:paging-runtime:2.1.2"
+    implementation "androidx.paging:paging-runtime-ktx:3.0.1"
 
     // optional - RxJava support for Room
-    implementation "androidx.room:room-rxjava2:2.2.5"
+    implementation "androidx.room:room-rxjava2:2.3.0"
 
     // optional - Guava support for Room, including Optional and ListenableFuture
-    implementation "androidx.room:room-guava:2.2.5"
+    implementation "androidx.room:room-guava:2.3.0"
 
     // ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
 
     //Recyclerview
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha06'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.cardview:cardview:1.0.0'
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
-    implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.1"
 
     // Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
 
     // Gson
     implementation "com.google.code.gson:gson:2.8.6"
 
     // Glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
     // Test
-    testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //ViewPager2
     implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
-    implementation 'androidx.fragment:fragment-ktx:1.3.0-beta01'
-    implementation 'com.google.android.material:material:1.3.0-alpha04'
+    implementation 'androidx.fragment:fragment-ktx:1.4.0-alpha05'
+    implementation 'com.google.android.material:material:1.5.0-alpha01'
 
-
-    // MaterialDrawer  Mike Penz
-    implementation "com.mikepenz:materialdrawer:7.0.0"
-    // Add for NavController support
-    implementation "com.mikepenz:materialdrawer-nav:7.0.0"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //paging3
+    implementation "androidx.paging:paging-runtime-ktx:3.1.0-alpha03"
 
     //MaterialSearchView
     implementation 'br.com.mauker.materialsearchview:materialsearchview:1.3.0-rc01'
